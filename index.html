@@ -137,6 +137,79 @@
             justify-content: center;
             font-size: 48px;
         }
+        /* ===== PILOTS section ===== */
+        .pilot-card {
+            background: #000;
+            border: 2px solid var(--pc, #00f2ff);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .pilot-card:hover {
+            transform: translateY(-6px);
+            box-shadow:
+                0 0 18px color-mix(in oklab, var(--pc) 70%, transparent),
+                0 0 48px color-mix(in oklab, var(--pc) 45%, transparent),
+                inset 0 0 24px color-mix(in oklab, var(--pc) 15%, transparent);
+        }
+        .pilot-card .pilot-img {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(1.05);
+        }
+        .pilot-card .pilot-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            border-top: 1px solid color-mix(in oklab, var(--pc) 40%, transparent);
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, color-mix(in oklab, var(--pc) 8%, #000) 100%);
+        }
+        .pilot-callsign-label {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.35em;
+            color: var(--pc);
+            text-shadow: 0 0 8px color-mix(in oklab, var(--pc) 60%, transparent);
+        }
+        .pilot-callsign {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 0.08em;
+            color: #fff;
+            line-height: 1.1;
+            margin-top: 0.15rem;
+        }
+        .pilot-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            color: rgba(255,255,255,.85);
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-top: 0.35rem;
+        }
+        .pilot-class-label {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 0.65rem;
+            letter-spacing: 0.35em;
+            color: var(--pc);
+            text-shadow: 0 0 6px color-mix(in oklab, var(--pc) 55%, transparent);
+            margin-top: 0.9rem;
+        }
+        .pilot-class {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            color: #fff;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 0.15rem;
+        }
     </style>
 </head>
 <body>
@@ -313,6 +386,62 @@
                     <div class="text-sm font-bold uppercase tracking-wider mb-2" data-t="feat3_title">Pure HTML5</div>
                     <div class="text-[11px] text-white/40 leading-relaxed" data-t="feat3_desc">
                         No installation. 60 FPS in any modern browser.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilots Section -->
+        <section class="mt-32">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-4 text-glow" data-t="pilots_title">
+                PILOTS
+            </h2>
+            <p class="text-center text-white/40 text-sm uppercase tracking-widest mb-16" data-t="pilots_subtitle">
+                Choose your ace
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="pilot-card" style="--pc:#ff8a1f;">
+                    <img class="pilot-img" src="https://id-preview--0d0c7750-60cd-4b34-b47e-65103c9a69bc.lovable.app/__l5e/assets-v1/d1bd7dc6-0d2f-499e-adf7-59cdb0f68e10/sara.png" alt="Iron - Sara Vet">
+                    <div class="pilot-body">
+                        <div class="pilot-callsign-label">CALLSIGN:</div>
+                        <div class="pilot-callsign">IRON</div>
+                        <div class="pilot-name">Sara 'Iron' Vet</div>
+                        <div class="pilot-class-label">CLASS:</div>
+                        <div class="pilot-class">Heavy Artillery Veteran</div>
+                    </div>
+                </div>
+
+                <div class="pilot-card" style="--pc:#00f2ff;">
+                    <img class="pilot-img" src="https://id-preview--0d0c7750-60cd-4b34-b47e-65103c9a69bc.lovable.app/__l5e/assets-v1/d18851f5-12ad-41b6-a6d9-898bc8004a19/axel.png" alt="Neon - Axel Ryder">
+                    <div class="pilot-body">
+                        <div class="pilot-callsign-label">CALLSIGN:</div>
+                        <div class="pilot-callsign">NEON</div>
+                        <div class="pilot-name">Axel Ryder</div>
+                        <div class="pilot-class-label">CLASS:</div>
+                        <div class="pilot-class">Street Racer Elite</div>
+                    </div>
+                </div>
+
+                <div class="pilot-card" style="--pc:#ffce00;">
+                    <img class="pilot-img" src="https://id-preview--0d0c7750-60cd-4b34-b47e-65103c9a69bc.lovable.app/__l5e/assets-v1/09a15815-212b-46cf-902b-028885d89e4d/barney.png" alt="Tank - Barney Rook">
+                    <div class="pilot-body">
+                        <div class="pilot-callsign-label">CALLSIGN:</div>
+                        <div class="pilot-callsign">TANK</div>
+                        <div class="pilot-name">Barney 'Tank' Rook</div>
+                        <div class="pilot-class-label">CLASS:</div>
+                        <div class="pilot-class">Heavy Support / Ex-Miner</div>
+                    </div>
+                </div>
+
+                <div class="pilot-card" style="--pc:#ff2a3d;">
+                    <img class="pilot-img" src="https://id-preview--0d0c7750-60cd-4b34-b47e-65103c9a69bc.lovable.app/__l5e/assets-v1/e7f53a25-ad70-4124-a943-a0ece6ef3cd1/ghost.png" alt="Ghost - Unit 0-1">
+                    <div class="pilot-body">
+                        <div class="pilot-callsign-label">CALLSIGN:</div>
+                        <div class="pilot-callsign">GHOST</div>
+                        <div class="pilot-name">Unit 0-1</div>
+                        <div class="pilot-class-label">CLASS:</div>
+                        <div class="pilot-class">Cybernetic Infiltrator</div>
                     </div>
                 </div>
             </div>
