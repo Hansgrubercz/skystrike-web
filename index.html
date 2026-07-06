@@ -290,25 +290,27 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-4 flex-grow" id="ship-selector">
-                    <div class="ship-card active p-6 rounded-2xl flex flex-col items-center text-center" onclick="selectShip('f22')">
-                        <div class="text-4xl mb-4">✈️</div>
-                        <div class="text-[11px] font-bold uppercase tracking-widest">F-22 Raptor</div>
-                        <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">Balanced</div>
-                    </div>
-                    <div class="ship-card p-6 rounded-2xl flex flex-col items-center text-center opacity-30" onclick="selectShip('a10')">
-                        <div class="text-4xl mb-4">🛩️</div>
-                        <div class="text-[11px] font-bold uppercase tracking-widest">A-10 Warthog</div>
-                        <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">Spread Shot</div>
-                    </div>
-                    <div class="ship-card p-6 rounded-2xl flex flex-col items-center text-center opacity-30" onclick="selectShip('mig31')">
-                        <div class="text-4xl mb-4">🚀</div>
-                        <div class="text-[11px] font-bold uppercase tracking-widest">MiG-31</div>
-                        <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">Rapid Fire</div>
-                    </div>
-                    <div class="ship-card p-6 rounded-2xl flex flex-col items-center text-center opacity-30" onclick="selectShip('b2')">
-                        <div class="text-4xl mb-4">🛸</div>
-                        <div class="text-[11px] font-bold uppercase tracking-widest">B-2 Spirit</div>
-                        <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">Heavy Cannon</div>
+  <div class="ship-card active p-6 rounded-2xl flex flex-col items-center text-center" onclick="selectShip('ship1')">
+    <div class="text-4xl mb-4"><img src="assets/ship1.png" alt="Dart" style="width: 50px; height: auto;"></div>
+    <div class="text-[11px] font-bold uppercase tracking-widest">SKYSTRIKE DART</div>
+    <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">INTERCEPTOR</div>
+  </div>
+  <div class="ship-card p-6 rounded-2xl flex flex-col items-center text-center opacity-30" onclick="selectShip('ship2')">
+    <div class="text-4xl mb-4"><img src="assets/ship2.png" alt="Viper" style="width: 50px; height: auto;"></div>
+    <div class="text-[11px] font-bold uppercase tracking-widest">NEON VIPER</div>
+    <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">STEALTH FIGHTER</div>
+  </div>
+  <div class="ship-card p-6 rounded-2xl flex flex-col items-center text-center opacity-30" onclick="selectShip('ship3')">
+    <div class="text-4xl mb-4"><img src="assets/ship3.png" alt="Mantis" style="width: 50px; height: auto;"></div>
+    <div class="text-[11px] font-bold uppercase tracking-widest">TANK MANTIS</div>
+    <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">HEAVY ASSAULT</div>
+  </div>
+  <div class="ship-card p-6 rounded-2xl flex flex-col items-center text-center opacity-30" onclick="selectShip('ship4')">
+    <div class="text-4xl mb-4"><img src="assets/ship4.png" alt="Wraith" style="width: 50px; height: auto;"></div>
+    <div class="text-[11px] font-bold uppercase tracking-widest">GHOST WRAITH</div>
+    <div class="text-[8px] text-cyan-400/60 mt-1 uppercase font-bold tracking-widest">CYBERNETIC RAID</div>
+  </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -797,29 +799,4 @@
             updateUI();
         }
     </script>
-</body><section id="fleet" style="padding: 50px 0; text-align: center;">
-  <h2 style="color: white; margin-bottom: 30px;">OUR FLEET</h2>
-  <div class="machines-grid" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <div class="machine-card" style="border: 2px solid cyan; padding: 20px; width: 250px; background: black;">
-      <img src="assets/ship1.png" alt="Skystrike Dart" style="width: 100%; height: auto;">
-      <h3 style="color: cyan;">MODEL: SKYSTRIKE DART</h3>
-      <p style="color: white;">TYPE: INTERCEPTOR</p>
-    </div>
-    <div class="machine-card" style="border: 2px solid teal; padding: 20px; width: 250px; background: black;">
-      <img src="assets/ship2.png" alt="Neon Viper" style="width: 100%; height: auto;">
-      <h3 style="color: teal;">MODEL: NEON VIPER</h3>
-      <p style="color: white;">TYPE: STEALTH FIGHTER</p>
-    </div>
-    <div class="machine-card" style="border: 2px solid yellow; padding: 20px; width: 250px; background: black;">
-      <img src="assets/ship3.png" alt="Tank Mantis" style="width: 100%; height: auto;">
-      <h3 style="color: yellow;">MODEL: TANK MANTIS</h3>
-      <p style="color: white;">TYPE: HEAVY ASSAULT</p>
-    </div>
-    <div class="machine-card" style="border: 2px solid purple; padding: 20px; width: 250px; background: black;">
-      <img src="assets/ship4.png" alt="Ghost Wraith" style="width: 100%; height: auto;">
-      <h3 style="color: purple;">MODEL: GHOST WRAITH</h3>
-      <p style="color: white;">TYPE: CYBERNETIC RAID</p>
-    </div>
-  </div>
-</section>
-</html>
+</body>
